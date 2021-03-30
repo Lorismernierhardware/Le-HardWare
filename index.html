@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="image/iconsite.png" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil Mernier-Loris</title>
+<link rel="stylesheet" href="./w3css/design.css">
+<script src="https://kit.fontawesome.com/4a7f27d6f4.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--Menu header-->
+<header class="header">
+<select id="theme">
+<option value="auto">Auto</option>
+<option value="light">Clair</option>
+<option value="dark">Sombre</option>
+</select>
+</ul>
+</div>
+</li>
+</nav>
+<script>
+function applyTheme(theme) {
+document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+document.body.classList.add(`theme-${theme}`);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+document.querySelector("#theme").addEventListener("change", function() {
+applyTheme(this.value);
+});
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+const savedTheme = localStorage.getItem("theme") || "auto";
+applyTheme(savedTheme);
+
+for (const optionElement of document.querySelectorAll("#theme option")) {
+optionElement.selected = savedTheme === optionElement.value;
+}
+
+document.querySelector("#theme").addEventListener("change", function () {
+localStorage.setItem("theme", this.value);
+applyTheme(this.value);
+});
+});
+</script>
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+<ul class="menu">
+<li><a class="lien-menu" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+<li><a class="lien-menu" href="tours.html"><i class="fas fa-laptop"></i> Boîtiers</a></li>
+<li><a class="lien-menu" href="clavi.html"><i class="fas fa-keyboard"></i> Claviers</a></li>
+<li><a class="lien-menu" href="souriss.html"><i class="fas fa-mouse-pointer"></i> souris</a></li>
+<li><a class="lien-menu" href="legende.html"><i class="fas fa-briefcase"></i> Légende </a></li>
+</ul>
+</header>
+<!--Fond parralaxe-->
+<div class="container" id="blur"></div></div>
+<div class="parallax1"></div>
+<!--Texte page numéro 1-->
+<div class="Titre1-home"><br>L'INFORMATIQUE<br><br></div>
+<div class="centre">Je vais vous parler des périphériques d'un pc, Mais déja savez-vous c'est quoi un  périphérique et savez-vous à quoi servent-ils  ?<br><br>
+Un périphérique informatique est un objet qui se relie à un ordinateur afin d'ajouter une ou plusieurs fonctions.
+Il existe des périphériques informatiques d'entrée (clavier, souris,...) et des périphériques de sortie (écran,casques audio,...)
+ <br><br><br></div><br /> <br /> <br /> 
+<div class="parallax2"></div>
+<div id="reseaux" class="Titre1-home">Liens<br><br></div>
+<div class="reseaux">Voici les liens des réseaux sociaux</div>
+<div class="titrehome-lien-grille">
+<a class="titrehome-lien" type="link" target="_blank" href="https://www.indbertrix.be/"><br><i class="fas fa-link"></i><br></a>
+<a class="titrehome-lien" type="link" target="_blank" href="https://www.instagram.com/loris_mrn_/"><br><i class="fab fa-instagram-square"></i><br></a>
+<a class="titrehome-lien" type="link" target="_blank" href="https://www.facebook.com/yolopo06gta5"><br><i class="fab fa-facebook-square"></i><br><br><br></a>
+</div>
+<div class="parallax3"></div>
+<div id="a-propos" class="Titre1-home">A propos<br><br></div>
+<div id="qui-a-cree-ce-site" class="Titre2-home">Qui a créé ce site ?</div>
+<div  class="loris"><br /> Loris mernier élèves de <a alt="Site de l'Ind Bertrix" title="Ind Bertrix" class="liennnn" href="https://www.indbertrix.be/">l'Ind Bertrix</a> en 3TT informatique.</div>
+<iframe class="googlemaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.2682697790037!2d5.249860915601913!3d49.85620513788453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ea808bb16f2275%3A0xcd1433aac34332ab!2sInstitut%20Notre-Dame!5e0!3m2!1sfr!2sbe!4v1616401673062!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+<!--Footer-->
+<footer class="footer-distributed">
+<div class="footer-droite">
+<a href="https://www.indbertrix.be/" target="_blank"><i class="fas fa-globe"></i></a>
+<a href="index.html"> ↑</a>
+</div>
+<div class="footer-gauche">
+<p class="liens-footer">
+<a class="liens-footer1" href="#">Menu principal</a>
+·
+<a class="liens-footer2" href="tours.html">boîtiers</a>
+·
+<a class="liens-footer3" href="legende.html">Liens</a>
+</p>
+</div>
+
+</footer>
+</body>
+</html>

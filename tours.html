@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Les tours </title>
+    <link rel="icon" type="image/png" href="image/iconsite.png" />
+    <script src="https://kit.fontawesome.com/4a7f27d6f4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./w3css/tours.css" />
+</head>
+<body>
+<!--Menu header-->
+<header class="header">
+    <select id="theme">
+    <option value="auto">Auto</option>
+    <option value="light">Clair</option>
+    <option value="dark">Sombre</option>
+    </select>
+    </ul>
+    </div>
+    </li>
+    </nav>
+    <script>
+    function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+    document.body.classList.add(`theme-${theme}`);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("#theme").addEventListener("change", function() {
+    applyTheme(this.value);
+    });
+    });
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "auto";
+    applyTheme(savedTheme);
+    
+    for (const optionElement of document.querySelectorAll("#theme option")) {
+    optionElement.selected = savedTheme === optionElement.value;
+    }
+    
+    document.querySelector("#theme").addEventListener("change", function () {
+    localStorage.setItem("theme", this.value);
+    applyTheme(this.value);
+    });
+    });
+    </script>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+    <li><a class="lien-menu" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+    <li><a class="lien-menu" href="tours.html"><i class="fas fa-laptop"></i> Boîtiers</a></li>
+    <li><a class="lien-menu" href="clavi.html"><i class="fas fa-keyboard"></i> Claviers</a></li>
+    <li><a class="lien-menu" href="souriss.html"><i class="fas fa-mouse-pointer"></i> souris</a></li>
+    <li><a class="lien-menu" href="legende.html"><i class="fas fa-briefcase"></i> Légende </a></li>
+    </ul>
+    </header>
+    <!--Fond parralaxe-->
+    <div class="container" id="blur"></div></div>
+    <div class="parallax1"></div>
+    </header>
+    <!--Fond parralaxe-->
+<div class="container" id="blur"></div></div>
+<div class="parallax1"></div>
+
+<p id="pc">Alors sur cette page je vais vous présentez differents types de boîtiers :</p>
+
+    <h1 id="texte">Premièrement il y a deux types de boîtiers </h1> <br />
+    <p id="boit"> Voici le boîtiers plutôt bureautique simple </p>
+    <a id="lien" href="https://www.ldlc.com/fr-be/fiche/PB00216632.html" ><img src="image/tourspcbureau.jpg" alt="img .tours" title="boîtier bureautique" /></a>
+    <div id="boibureau"> Un boîtier de bureau qui comprend donc un bloc d'alimentation avec une carte mere avec un systeme d'entré et de sorties. 
+    Ce boîtier peut être connecté en permanence à plusieurs périphériques comme un écran, un clavier, une souris, des haut-parleurs, un micro, un disque dur externe, une imprimante, un scanneur, etc. Le boîtier peut être placé à la verticale ou l'horizontale, sur le bureau, à côté ou sous celui-ci. 
+    <br />  <br />  <br />  Pour ce type de boîtiers il ne faut pas s'attendre à avoir une grosse configuration car il y a un manque de place et ce type de boîtiers sont fait pour des pc dédié au traitement de texte ou meme faire du télétravail mais pas pour jouer a des jeux vidéos. 
+    </div>
+    
+    <br /><br /><br /><br /><br /><br /><br /><br /><a id="lien1" href="https://www.ldlc.com/fr-be/fiche/PB00216632.html"> cliquez ici pour voir un boitier ou en cliquant sur l'image de la tour   </a>
+
+    <br />  <br />  <br /><br /><br /><h1 id="boigaming"> Ici nous retrouvons un boitier avec un design travaillé</h1>
+   <a id="lien2" href="https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_w_boi_sa_puis_ref_est_in20002592.html" ><img src="image/pcgaming1.png" id="gam" alt="img .gaming" title="boîtier leds " /></a>
+    <div id="paragraphe2"><br /> <br /> <br /> <br />  Un boîtier comme représenté à gauche on peut apercevoir une esthétique particulière comme des leds un peu partout, pour faire joli, la difference d'un boîtier pour les pc pas super performant et les boîtiers dédié pour les pc gaming c'est que la tour est ouverte et sur une tour de bureautique c'est fermé.<br /><br /><br />
+          Avec ce types de boîtiers on peut avoir une assez grosse configurations car il y a beaucoup de place on peut voir qu'il faut des ventillateurs,une bonne Alimentation, carte graphique, un disque dur avec un ssd, au grand minimum 8 giga de ram (16 c'est bien ),avec aussi une carte mere et un bon processeur.
+         Voici ce qu'on peut retrouver dans une tour comme ca, quand on a une tour comme ca c'est pour jouer, stream ou tout simplement avoir un bon pc.
+        </div>
+        <a id="lientopachat" href="https://www.topachat.com/pages/detail2_cat_est_micro_puis_rubrique_est_w_boi_sa_puis_ref_est_in20002592.html" > cliquez ici pour voir un boîtier gamer ou en cliquant sur l'image du boîtier </a> 
+        <br /><br /><br /><br /><p id="setup"> un magnifique setup ! </p>
+       <br /><p id="fleches">↓       ↓ </p> <br /> <br /> <br /> <br /><br /> <br /> <br /> <br /><br /> <br /> <br /> <br /><br /> <br /> <br /> <br /> 
+       <br /> <br /> <br /> <br /> <br /> <br /><img src="image/setup.jpg" alt="img .setup" title="setup parfait " id="photo" />
+         <!--Footer-->
+<footer class="footer-distributed">
+    <div class="footer-droite">
+    <a href="https://www.indbertrix.be/" target="_blank"><i class="fas fa-globe"></i></a>
+    <a href="tours.html"> ↑</a>
+    </div>
+    <div class="footer-gauche">
+    <p class="liens-footer">
+    <a class="liens-footer1" href="index.html">Menu principal</a>
+    ·
+    <a class="liens-footer2" href="clavi.html">Claviers</a>
+    ·
+    <a class="liens-footer3" href="legende.html">Liens</a>
+    </p>
+    </div>
+
+       
+</body>
+</html>

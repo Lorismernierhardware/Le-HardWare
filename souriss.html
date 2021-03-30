@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les souris</title>
+    <link rel="icon" type="image/png" href="image/iconsite.png" />
+    <script src="https://kit.fontawesome.com/4a7f27d6f4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./w3css/souriss.css" />
+</head>
+<body>
+    <!--Menu header-->
+<header class="header">
+    <select id="theme">
+    <option value="auto">Auto</option>
+    <option value="light">Clair</option>
+    <option value="dark">Sombre</option>
+    </select>
+    </ul>
+    </div>
+    </li>
+    </nav>
+    <script>
+    function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+    document.body.classList.add(`theme-${theme}`);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector("#theme").addEventListener("change", function() {
+    applyTheme(this.value);
+    });
+    });
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "auto";
+    applyTheme(savedTheme);
+    
+    for (const optionElement of document.querySelectorAll("#theme option")) {
+    optionElement.selected = savedTheme === optionElement.value;
+    }
+    
+    document.querySelector("#theme").addEventListener("change", function () {
+    localStorage.setItem("theme", this.value);
+    applyTheme(this.value);
+    });
+    });
+    </script>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+    <li><a class="lien-menu" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+    <li><a class="lien-menu" href="tours.html"><i class="fas fa-laptop"></i> Boîtiers</a></li>
+    <li><a class="lien-menu" href="clavi.html"><i class="fas fa-keyboard"></i> Claviers</a></li>
+    <li><a class="lien-menu" href="souriss.html"><i class="fas fa-mouse-pointer"></i> souris</a></li>
+    <li><a class="lien-menu" href="legende.html"><i class="fas fa-briefcase"></i> Légende </a></li>
+    </ul>
+    </header>
+    <!--Fond parralaxe-->
+    <div class="container" id="blur"></div></div>
+    <div class="parallax1"></div>
+    </header>
+    <!--Fond parralaxe-->
+<div class="container" id="blur"></div></div>
+<div class="parallax1"></div>
+
+<p id="paragraphe1"> Voici deux types de souris que je vais vous présenter </p>
+
+<h1 id="sous-titree"> ici nous avons une souris simple </h1>
+
+<a href="https://www.amazon.fr/Logitech-B100-Souris-optique-Noir/dp/B00AZKNPZC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=souris+pc+basique&qid=1617016951&sr=8-1" ><img src="image/sourissimple.jpg" id="sourissimple" alt="img .sourissimple" title="souris basique" /></a>
+<a id="souris11" href="https://www.amazon.fr/Logitech-B100-Souris-optique-Noir/dp/B00AZKNPZC/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=souris+pc+basique&qid=1617016951&sr=8-1"> cliquez ici pour voir une souris ou en cliquant sur l'image de la souris   </a>
+<div id="sourisbasique1"> En informatique, le terme souris -- « mouse », en anglais -- fait référence à un dispositif de commande tenu dans la paume de la main, connecté à un ordinateur et dont le déplacement sur une surface entraîne le déplacement d'un curseur sur l'écran. <br /><br /><br /> Donc une souris simple comme celle-ci est destiné juste a deplacé ca souris. </div>
+
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><h2 id="sous-titree1"> Ici nous avons une souris gamer </h2>
+
+<a href="https://www.amazon.fr/PICTEK-Ergonomique-Configurable-R%C3%A9tro%C3%A9clairage-Personnalisable-8000DPI/dp/B089741CBP/ref=sr_1_6?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=souris+gamer+led&qid=1617018105&sr=8-6" ><img src="image/sourisgamer.jpg" id="sourisgamer" alt="img .sourisgamer" title="souris gamer" /></a>
+<a id="souris22" href="https://www.amazon.fr/PICTEK-Ergonomique-Configurable-R%C3%A9tro%C3%A9clairage-Personnalisable-8000DPI/dp/B089741CBP/ref=sr_1_6?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=souris+gamer+led&qid=1617018105&sr=8-6"> cliquez ici pour voir une souris gamer ou en cliquant sur l'image de la souris   </a>
+<div id="sourisgamer1"> La souris gamer, ou « souris de jeu vidéo », est une variante de la souris informatique conçue pour les jeux vidéo sur ordinateur. ... La souris gamer est en principe destiné à un PC gamer, un ordinateur conçu pour le jeu vidéo.
+ <br /><br /><br /> Cette souris est disign pour les jeux vidéos, belle apercue de la souris, beaucoup de DPI, souris rapide  </div>
+
+ <!--Footer-->
+ <br /><br /><br /><br /><br /> <footer class="footer-distributed">
+    <div class="footer-droite">
+    <a href="https://www.indbertrix.be/" target="_blank"><i class="fas fa-globe"></i></a>
+    <a href="souriss.html"> ↑</a>
+    </div>
+    <div class="footer-gauche">
+    <p class="liens-footer">
+    <a class="liens-footer1" href="index.html">Menu principal</a>
+    ·
+    <a class="liens-footer2" href="legende.html">Légende</a>
+    ·
+    <a class="liens-footer3" href="legende.html">Liens</a>
+    </p>
+    </div>
+</body>
+</html>
