@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+}
+body {
+    overflow: overlay;
+    background-color: var(--background-color);
+}
+div {
+    background-color: var(--background-color);
+}
+html, body {
+    height:100%;
+    --background-color: white;
+    --text-color: #000000;
+    --background-color-index: rgb(240, 240, 240);
+    --background-color-index-hover: rgb(204, 204, 204);
+    --text-color-titre1: rgb(19, 19, 19);
+    --text-color-titre2: rgb(32, 32, 32);
+    --text-color-titre3: rgb(43, 43, 43);
+    --text-color-titre4: rgb(43, 43, 43);
+    transition-property: background-color;
+    transition-duration: 0.6s;
+    transition-property: color;
+    transition-duration: 0.6s;
+}
+.main-content {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+#theme {
+    background-color:rgb(24, 24, 24);
+    border: none;
+    color: white;
+    outline-style:none;
+}
+#theme:active {
+    outline-style:none;
+}
+:root {
+    --dark-background-color: #111111;
+    --dark-text-color: #eeeeee;
+    --dark-background-color-index: rgb(27, 27, 27);
+    --dark-background-color-index-hover: rgb(66, 66, 66);
+    --dark-text-color-titre1: rgb(247, 247, 247);
+    --dark-text-color-titre2: rgb(231, 231, 231);
+    --dark-text-color-titre3: rgb(226, 226, 226);
+    --dark-text-color-titre4: rgb(219, 219, 219);
+}
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(--dark-text-color);
+    --background-color-index: var(--dark-background-color-index);
+    --background-color-index-hover: var(--dark-background-color-index-hover);
+    --text-color-titre1: var(--dark-text-color-titre1);
+    --text-color-titre2:var(--dark-text-color-titre2);
+    --text-color-titre3:var(--dark-text-color-titre3);
+    --text-color-titre4:var(--dark-text-color-titre4);
+}
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+        --background-color-index: var(--dark-background-color-index);
+        --text-color-titre1: var(--dark-text-color-titre1);
+        --text-color-titre2:var(--dark-text-color-titre2);
+        --text-color-titre3:var(--dark-text-color-titre3);
+        --text-color-titre4:var(--dark-text-color-titre4);
+    }
+}
+
+/*Barre de scroll*/
+::-webkit-scrollbar {
+    width: 7px;
+    height: 12px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    width:20px;
+    box-shadow: inset 0px 0px 20px rgb(170, 170, 170);
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/*Fond parallaxe*/
+.parallax1 {
+    background-image: url('../image/setupgaming.jpg');
+    cursor: url('../image/tourspcicon.png'), pointer;
+}
+.parallax2 {
+    background-image: url('../image/peripheriqueentier.jpg');
+}
+.parallax3 {
+    background-image: url('../image/indddddd.jpg');
+}
+.parallax4 {
+    background-image: url('Images/FondMinecraft4.png');
+}
+.parallax1 {
+    height: 60%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background-color);
+}
+.parallax2, .parallax3, .parallax4 {
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--background-color);
+}
+
+/*Menu header*/
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.lien-menu {
+    color: white;
+    transition-property: background-color;
+    transition-duration: 0.6s;
+}
+.lien-menu:hover {
+    color: rgb(214, 214, 214);
+    transition-property: color;
+    transition-duration: 0.6s;
+}
+
+.liennnn{
+    color: blue;
+}
+
+/* header */
+.header {
+    background-color: rgb(24, 24, 24);
+    box-shadow: 0.5px 0.5px 10px rgb(24, 24, 24);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgb(24, 24, 24);
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: rgb(32, 32, 32);
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/*Espace entre le corps et le menu*/
+.corps {
+    padding-top: 63px;
+}
+
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 1070px) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+    #theme {
+        background-color:rgb(24, 24, 24);
+        border: none;
+        color: white;
+        outline-style:none;
+        margin: 0;
+        padding: 20px 20px;
+    }
+/*Bouton mode sombre*/
+#bouton-darkmode {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    border: none;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 20px;
+}
+/*Footer*/
+footer {
+    padding-top: 80px;
+}
+.footer-distributed {
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: normal 16px sans-serif;
+	padding: 45px 50px;
+}
+.footer-distributed .footer-gauche p {
+	color:  #22a6b3;
+	font-size: 14px;
+	margin: 0;
+    background-color: #292c2f;
+}
+.footer-distributed p.liens-footer {
+	font-size:18px;
+	font-weight: bold;
+	color:#22a6b3;
+	margin: 0 0 10px;
+    padding: 0;
+    font-weight: 550;
+    background-color: #292c2f;
+}
+.footer-distributed p.liens-footer a {
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+    background-color: #292c2f;
+}
+.footer-distributed p.liens-footer a:hover {
+    color:#22a6b3;
+    transition-property: color;
+    transition-duration: 0.6s;
+    background-color: #292c2f;
+}
+.footer-distributed .footer-droite{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+    background-color: #292c2f;
+}
+.footer-distributed .footer-droite a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #22a6b3;
+	text-align: center;
+    line-height: 35px;
+    font-weight: 300;
+    background-color: #292c2f;
+	margin-left: 3px;
+}
+.footer-distributed .footer-droite a:hover{
+    color: #22a6b3;
+    transition-property: color;
+    transition-duration: 0.6s;
+}
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-gauche,
+	.footer-distributed .footer-droite{
+		text-align: center;
+	}
+	.footer-distributed .footer-droite{
+		float: none;
+		margin: 0 auto 20px;
+	}
+	.footer-distributed .footer-gauche p.liens-footer{
+		line-height: 1.8;
+	}
+}
+/*Surlignage du texte*/
+::-moz-selection { /*@bugfix mozilla*/
+    background:#3742fa;
+    color: white;
+}
+::selection { /* effet souris  */
+    background:#3742fa;
+    color: white
+}
+/*Texte paragraphe*/
+p {
+    text-align:justify;
+    padding-left:400px;
+    padding-right:30px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+@media screen and (max-width: 980px){
+p {
+    text-align:justify;
+    padding-left:30px;
+    padding-right:30px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    }
+}
+
+#pc{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#texte{
+    text-align: center;
+    font-size: 25px;
+    color: var(--text-color);
+    background-color: var(--background-color)
+}
+#boit {
+  font-style: bolder;
+   margin-left: -390px;
+}
+#lien {
+    float: left;
+    height:70px ;
+    width: 500px;
+    cursor: grabbing;
+}
+#boibureau {
+    float: left;
+   margin-left: 450px;
+   margin-bottom: 200px;
+   color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+#lien1 {
+    margin-left: 450px;
+    color:#22a6b3;
+}
+
+#boigaming {
+   margin-left: 10px;
+    font-size: 15px;
+    top: 1px;
+    position: relative;
+    color: var(--text-color);
+    background-color: var(--background-color)
+}
+
+#gam {
+    margin-left: 10px;
+    height: 400px;
+    width: 350px;
+    cursor: grabbing;
+}
+
+#lien2 {
+    float: left;
+}
+#paragraphe2 {
+    margin-left: 380px;
+    margin-bottom: 400px;
+    position: absolute;
+    top: 1900px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+#lientopachat {
+    margin-left: 100px;
+    color :#22a6b3;
+    top: 300px;
+    position: relative;
+}
+
+#fleches {
+    margin-left:550px;
+    position: absolute;
+    top: 2300px;
+    display: block;
+}
+
+#photo{
+    height: 550px;
+    width: 600px;
+    margin-left: 700px;
+    display: block;
+}
+
+#setup {
+    margin-left: 500px;
+    position: absolute;
+    top: 2250px;
+    font-style: italic;
+    font-weight: bolder;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+}
